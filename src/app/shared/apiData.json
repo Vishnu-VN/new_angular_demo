@@ -1,0 +1,57 @@
+{
+  "salesData": {
+    "data": [
+      {
+        "data": [65, 59, 80, 81, 23, 2, 90],
+        "label": "Sales"
+      }
+    ],
+    "colorCode": "#39a3f4"
+  },
+  "viewsData": {
+    "data": [
+      {
+        "data": [25, 49, 10, 81, 13, 12, 30],
+        "label": "Views"
+      }
+    ],
+    "colorCode": "#76be45"
+  },
+  "usersData": {
+    "data": [
+      {
+        "data": [95, 49, 40, 11, 93, 20, 9],
+        "label": "Users"
+      }
+    ],
+    "colorCode": "#dea242"
+  },
+  "socialData": {
+    "data": [
+      {
+        "data": [62, 5, 80, 2, 60, 90, 30],
+        "label": "Social"
+      }
+    ],
+    "colorCode": "#d67161"
+  },
+  "currentStatus": {
+    "users": {
+      "data": "40",
+      "color": "#6ebc3b"
+    },
+    "mobile": {
+      "data": "35",
+      "color": "#f6a821"
+    },
+    "views": {
+      "data": "25",
+      "color": "#039ade"
+    },
+    "sales": {
+      "data": "30",
+      "color": "#d66351"
+    },
+    "total": "50"
+  }
+}

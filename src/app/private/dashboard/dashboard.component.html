@@ -1,0 +1,162 @@
+<div class="layout-content-container">
+  <!-- <ng-component class="ng-star-inserted"> -->
+  <div class="ui-g dashboard">
+    <div class="ui-g-12 ui-md-3">
+      <canvas
+        baseChart
+        width="400"
+        height="250"
+        [datasets]="salesData?.data"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [colors]="[
+          { borderColor: 'black', backgroundColor: salesData?.colorCode }
+        ]"
+        [legend]="lineChartLegend"
+        [chartType]="lineChartType"
+      >
+      </canvas>
+    </div>
+    <div class="ui-g-12 ui-md-3">
+      <canvas
+        baseChart
+        width="400"
+        height="250"
+        [datasets]="viewsData?.data"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [colors]="[
+          { borderColor: 'black', backgroundColor: viewsData?.colorCode }
+        ]"
+        [legend]="lineChartLegend"
+        [chartType]="lineChartType"
+      >
+      </canvas>
+    </div>
+    <div class="ui-g-12 ui-md-3">
+      <canvas
+        baseChart
+        width="400"
+        height="250"
+        [datasets]="usersData?.data"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [colors]="[
+          { borderColor: 'black', backgroundColor: usersData?.colorCode }
+        ]"
+        [legend]="lineChartLegend"
+        [chartType]="lineChartType"
+      >
+      </canvas>
+    </div>
+    <div class="ui-g-12 ui-md-3">
+      <canvas
+        baseChart
+        width="400"
+        height="250"
+        [datasets]="socialData?.data"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [colors]="[
+          { borderColor: 'black', backgroundColor: socialData?.colorCode }
+        ]"
+        [legend]="lineChartLegend"
+        [chartType]="lineChartType"
+      >
+      </canvas>
+    </div>
+    <div class="ui-g-12">
+      <p-panel header="Current Status" [toggleable]="false">
+        <div class="circle-panel ui-g">
+          <div class="ui-g-12 ui-lg-3 ui-md-6">
+            <div
+              class="status-title"
+              [style.color]="currentStatus?.users?.color"
+            >
+              Users
+            </div>
+            <div class="progress-wrapper">
+              <round-progress
+                [current]="currentStatus?.users?.data"
+                [max]="currentStatus?.total"
+                [radius]="75"
+                [stroke]="10"
+                [color]="currentStatus?.users?.color"
+                [animation]="'easeInSine'"
+                [duration]="1000"
+                [style.margin-left.%]="showSideBar ? 25 : 19"
+              ></round-progress>
+              <div class="text" [style.color]="currentStatus?.users?.color">
+                {{ currentStatus?.users?.data }}
+              </div>
+            </div>
+          </div>
+          <div class="ui-g-12 ui-lg-3 ui-md-6">
+            <div
+              class="status-title"
+              [style.color]="currentStatus.mobile.color"
+            >
+              Mobile
+            </div>
+            <div class="progress-wrapper">
+              <round-progress
+                [current]="currentStatus.mobile.data"
+                [max]="currentStatus.total"
+                [radius]="75"
+                [stroke]="10"
+                [color]="currentStatus.mobile.color"
+                [animation]="'easeInSine'"
+                [duration]="1000"
+                [style.margin-left.%]="showSideBar ? 25 : 19"
+              ></round-progress>
+              <div class="text" [style.color]="currentStatus.mobile.color">
+                {{ currentStatus.mobile.data }}
+              </div>
+            </div>
+          </div>
+          <div class="ui-g-12 ui-lg-3 ui-md-6">
+            <div class="status-title" [style.color]="currentStatus.views.color">
+              Page Views
+            </div>
+            <div class="progress-wrapper">
+              <round-progress
+                [current]="currentStatus.views.data"
+                [max]="currentStatus.total"
+                [radius]="75"
+                [stroke]="10"
+                [color]="currentStatus.views.color"
+                [animation]="'easeInSine'"
+                [duration]="1000"
+                [style.margin-left.%]="showSideBar ? 25 : 19"
+              ></round-progress>
+              <div class="text" [style.color]="currentStatus.views.color">
+                {{ currentStatus.views.data }}
+              </div>
+            </div>
+          </div>
+          <div class="ui-g-12 ui-lg-3 ui-md-6">
+            <div class="status-title" [style.color]="currentStatus.sales.color">
+              Sales
+            </div>
+            <div class="progress-wrapper">
+              <round-progress
+                [current]="currentStatus.sales.data"
+                [max]="currentStatus.total"
+                [radius]="75"
+                [stroke]="10"
+                [color]="currentStatus.sales.color"
+                [animation]="'easeInSine'"
+                [duration]="1000"
+                [style.margin-left.%]="showSideBar ? 25 : 19"
+              ></round-progress>
+              <div class="text" [style.color]="currentStatus.sales.color">
+                {{ currentStatus.sales.data }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </p-panel>
+    </div>
+  </div>
+  <!-- </ng-component> -->
+</div>

@@ -1,0 +1,78 @@
+<div
+  class="layout-wrapper layout-static"
+  [ngClass]="{ 'layout-static-inactive': showSideBar }"
+>
+  <div class="topbar clearfix">
+    <img
+      alt="apollo-layout"
+      class="logo"
+      src="../../assets/images/png/codeobj_logo.png"
+      style="margin-left: -14px !important;"
+    />
+    <a id="menu-button" (click)="sideBarStatus()">
+      <i class="fa fa-align-left"></i>
+    </a>
+    <span class="topbar-search">
+      <input
+        pInputText
+        placeholder="Search"
+        type="text"
+        class="ui-inputtext ui-corner-all ui-state-default ui-widget"
+      />
+      <span class="fa fa-search"></span>
+    </span>
+    <span class="topbar-themeswitcher">
+      <p-inputSwitch class="ng-untouched ng-pristine ng-valid">
+        <div
+          role="checkbox"
+          class="ui-inputswitch ui-widget"
+          aria-checked="false"
+        >
+          <div class="ui-helper-hidden-accessible">
+            <input type="checkbox" />
+          </div>
+          <span class="ui-inputswitch-slider"></span>
+        </div>
+      </p-inputSwitch>
+    </span>
+  </div>
+  <div class="layout-menu-container">
+    <p-scrollPanel [style]="{ width: '100%', height: '100%' }">
+      <div class="layout-menu-title">MENU</div>
+      <p-panelMenu [model]="items"></p-panelMenu>
+      <div class="layout-menu-footer">
+        <div class="layout-menu-footer-title">TASKS</div>
+        <div class="layout-menu-footer-content">
+          <p-progressBar [value]="60" [showValue]="false"> </p-progressBar>
+          Today's progress
+          <p-progressBar [value]="20" [showValue]="false"> </p-progressBar>
+          Overall Pending work
+        </div>
+      </div>
+    </p-scrollPanel>
+  </div>
+  <div class="layout-content">
+    <div class="layout-breadcrumb">
+      <ul>
+        <li>
+          <a routerlink="" href="#/">
+            <i class="fa fa-home"></i>
+          </a>
+        </li>
+        <li>&emsp;/&emsp;Dashboard</li>
+      </ul>
+      <div class="layout-breadcrumb-options">
+        <a [routerLink]="['/login']" title="Logout">
+          <i class="fa fa-sign-out"></i>
+        </a>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+    <div class="layout-footer">
+      <div class="clearfix">
+        <span class="footer-text-left">PrimeNG Apollo</span>
+        <span class="footer-text-right">All Rights Reserved</span>
+      </div>
+    </div>
+  </div>
+</div>

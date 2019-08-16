@@ -1,0 +1,57 @@
+<div class="layout-content-container">
+  <p-accordion>
+    <p-accordionTab
+      style="margin: 0px 10px;"
+      *ngFor="let result of displayResult"
+      [header]="result.title"
+    >
+      <div class="ui-g"><strong>Type</strong></div>
+      <div class="ui-g">
+        <div class=" ui-md-4">Title</div>
+        <div class=" ui-md-4 ui-md-offset-4">{{ result.title }}</div>
+      </div>
+      <div>
+        <div class="ui-g"><strong>Admin Configurations</strong></div>
+        <div class="ui-g">
+          <div class=" ui-md-4">Barge In Resume</div>
+          <div class=" ui-md-4 ui-md-offset-4">
+            {{ result.Adminconfig.bargeInResume }}
+          </div>
+        </div>
+        <div class="ui-g">
+          <div class=" ui-md-4">Confidence Score</div>
+          <div class=" ui-md-4 ui-md-offset-4">
+            {{ result.Adminconfig.confidenceScoreThreshold }}
+          </div>
+        </div>
+        <div class="ui-g">
+          <div class=" ui-md-4">Config Url</div>
+          <div class=" ui-md-4 ui-md-offset-4">
+            {{ result.Adminconfig.credentials.url }}
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="ui-g"><strong>User Configurations</strong></div>
+        <div class="ui-g">
+          <div class=" ui-md-4">Welcome Note</div>
+          <div class=" ui-md-4 ui-md-offset-4">
+            {{ result.UserConfig.Prompts['WELCOME-GREETING'] }}
+          </div>
+        </div>
+        <div class="ui-g">
+          <div class=" ui-md-4">Language</div>
+          <div class=" ui-md-4 ui-md-offset-4">
+            {{ result.UserConfig.Language }}
+          </div>
+        </div>
+        <div class="ui-g">
+          <div class=" ui-md-4">Dues</div>
+          <div class=" ui-md-4 ui-md-offset-4">
+            {{ result.UserConfig.Prompts.PAYMENT }}
+          </div>
+        </div>
+      </div>
+    </p-accordionTab>
+  </p-accordion>
+</div>

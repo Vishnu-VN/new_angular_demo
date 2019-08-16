@@ -1,0 +1,71 @@
+[
+  {
+    "title": "SFI-COVERAGES",
+    "Adminconfig": {
+      "bargeInResume": false,
+      "echoSuppression": false,
+      "confidenceScoreThreshold": 0,
+      "credentials": {
+        "password": null,
+        "tokenServiceProviderUrl": "https://stream.watsonplatform.net/authorization/api/v1/token",
+        "tokenServiceUrl": "https://stream.watsonplatform.net/speech-to-text/api",
+        "tokenAuthEnabled": false,
+        "url": "https://stream.watsonplatform.net/speech-to-text/api",
+        "username": null
+      }
+    },
+    "UserConfig": {
+      "Language": "EN",
+      "Prompts": {
+        "WELCOME-GREETING": "Welcome to Security First Mortgagee Information Line",
+        "PAYMENT": "You have $340.00 due on 12-31-2019"
+      }
+    }
+  },
+  {
+    "title": "SFI-MORTGAGEE",
+    "Adminconfig": {
+      "bargeInResume": false,
+      "echoSuppression": false,
+      "confidenceScoreThreshold": 0,
+      "credentials": {
+        "password": null,
+        "tokenServiceProviderUrl": "https://stream.watsonplatform.net/authorization/api/v1/token",
+        "tokenServiceUrl": "https://stream.watsonplatform.net/speech-to-text/api",
+        "tokenAuthEnabled": false,
+        "url": "https://stream.watsonplatform.net/speech-to-text/api",
+        "username": null
+      }
+    },
+    "UserConfig": {
+      "Language": "EN",
+      "Prompts": {
+        "WELCOME-GREETING": "Welcome to Security First Mortgagee Information Line",
+        "PAYMENT": "You have $340.00 due on 12-31-2019"
+      }
+    }
+  },
+  {
+    "title": "SFI-FNOL",
+    "Adminconfig": {
+      "bargeInResume": false,
+      "echoSuppression": false,
+      "confidenceScoreThreshold": 0,
+      "credentials": {
+        "password": null,
+        "tokenServiceProviderUrl": "https://stream.watsonplatform.net/authorization/api/v1/token",
+        "tokenServiceUrl": "https://stream.watsonplatform.net/speech-to-text/api",
+        "tokenAuthEnabled": false,
+        "url": "https://stream.watsonplatform.net/speech-to-text/api",
+        "username": null
+      }
+    },
+    "UserConfig": {
+      "Language": "ES",
+      "Prompts": {
+        "WELCOME-GREETING": "Welcome to Security First Mortgagee Information Line",
+        "PAYMENT": "You have $340.00 due on 12-31-2019"
+      }
+    }
+  }
+]
